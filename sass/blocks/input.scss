@@ -1,0 +1,31 @@
+.input {
+  box-sizing: border-box;
+  padding-top: 11px;
+  padding-right: 26px;
+  padding-bottom: 10px;
+  padding-left: 26px;
+
+  font: inherit;
+
+  border: none;
+}
+
+.input::placeholder {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.7px;
+  color: $placeholder-color;
+}
+
+@media screen and (max-width: $mobile) {
+  .input {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

@@ -1,0 +1,4 @@
+.page-content {
+  @include outline; // временное
+  @include container;
+}

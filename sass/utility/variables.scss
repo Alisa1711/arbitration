@@ -1,0 +1,20 @@
+$font-family: Roboto, Arial, sans-serif;
+
+$font-color-base: #bdbdbd;
+$title-color: #ffffff;
+$background-color: #0b1119;
+$accent-color: #f99406;
+$placeholder-color: #afafaf;
+$text-button-color: #ffffff;
+$button-hover-color: #f7a83a;
+$button-active-color: #db8000;
+
+$mobile: 767px;
+$tablet: 768px;
+$desktop: 1200px;
+
+$max-width-tablet: 720 / 768 * 100%; //ширина контента
+$max-width-desktop: 1140 / 1200 * 100%; //ширина контента
+
+$min-width: 320px;
+$max-width: 1320px;

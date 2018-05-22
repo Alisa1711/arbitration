@@ -1,0 +1,22 @@
+.title {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  color: $title-color;
+  text-transform: uppercase;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: 1px;
+    };
+
+    @media screen and (min-width: $desktop) {
+      font-size: 40px;
+      line-height: 52px;
+      letter-spacing: 2px;
+    };
+}
