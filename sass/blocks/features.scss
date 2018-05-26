@@ -1,5 +1,6 @@
 .features {
   @include outline; //временно
+  @include container;
   margin: 0 auto;
 }
 
@@ -13,15 +14,32 @@
 }
 
 .features__item {
-  width: 200px;
+box-sizing: border-box;
 
   &::before {
     content: "";
     display: block;
-    width: 115px;
-    height: 71px;
-    background-color: $accent-color;//временно
-    opacity: 0.5; //временно
+    height: 74px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    // background-color: white;//временно
+    // opacity: 0.5; //временно
+  }
+
+  &--icon_comet::before {
+    width: 118px;
+    background-image: url("../img/feature-comet.svg");
+  }
+
+  &--icon_coins::before {
+    width: 65px;
+    background-image: url("../img/feature-coins.svg");
+  }
+
+  &--icon_case::before {
+    width: 69px;
+    background-image: url("../img/feature-case.svg");
   }
 }
 
@@ -35,6 +53,10 @@
 }
 
 @media screen and (max-width: $mobile) {
+  .features {
+    margin-top: 16px;
+  }
+
   .features__list {
     flex-direction: column;
     align-items: center;
@@ -43,14 +65,77 @@
   }
 
   .features__item {
+    width: 200 / $mobile-content * 100%;
+
+    &::before {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     & + & {
-    margin-top: 140px;
+    margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .features__item {
+    width: 220 / $tablet-content * 100%;
+    padding-right: 32 / $tablet-content * 100%;
+    & + & {
+      margin-left: 30 / $tablet-content * 100%;
     }
   }
 }
 
 @media screen and (min-width: $desktop) {
+  .features {
+    margin-top: -20px;
+  }
+
   .features__list {
+    position: relative;
+    justify-content: space-between; //todo
+    padding-left: 98 / $desktop-content * 100%; //todo
+
     line-height: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 116px;
+      left: 0;
+      width: 68 / $desktop-content * 100%;
+      height: 2px;
+
+      background-color: #ffffff;
+      opacity: 0.1;
+    }
+  }
+
+  .features__item {
+    position: relative;
+    width: 262 / $desktop-content * 100%;
+
+    & + & {
+      margin-left: 0px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 116px;
+      right: - (73 / 262 * 100%);
+      width: 115 / 262 * 100%;
+      height: 2px;
+
+      background-color: #ffffff;
+      opacity: 0.1;
+    }
+
+    &--last-line::after {
+      right: 0;
+      width: 68 / 262 * 100%;
+    }
   }
 }

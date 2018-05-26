@@ -4,6 +4,7 @@ $font-color-base: #bdbdbd;
 $title-color: #ffffff;
 $background-color: #0b1119;
 $accent-color: #f99406;
+$add-color: #ffffff;
 $placeholder-color: #afafaf;
 $text-button-color: #ffffff;
 $button-hover-color: #f7a83a;
@@ -13,8 +14,12 @@ $mobile: 767px;
 $tablet: 768px;
 $desktop: 1200px;
 
-$max-width-tablet: 720 / 768 * 100%; //ширина контента
-$max-width-desktop: 1140 / 1200 * 100%; //ширина контента
+$mobile-content: 290;
+$tablet-content: 720;
+$desktop-content: 1140;
+
+$max-width-tablet: $tablet-content / 768 * 100%;
+$max-width-desktop: $desktop-content / 1200 * 100%;
 
 $min-width: 320px;
-$max-width: 1320px;
+$max-width: 1600px;

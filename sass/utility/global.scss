@@ -1,12 +1,13 @@
 body {
   font-family: $font-family;
   font-size: 16px;
+  font-weight: 300;
   line-height: 24px;
   letter-spacing: 0.8px;
   color: $font-color-base;
 
   background-color: $background-color;
-  
+
   @media screen and (min-width: $desktop) {
     font-size: 18px;
   }

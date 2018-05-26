@@ -22,7 +22,8 @@
     box-sizing: border-box;
     min-width: $min-width;
     width: 100%;
-    padding: 0 (15 / 320 * 100%);
+    padding-left: 15 / 320 * 100%;
+    padding-right: 15 / 320 * 100%;
   }
 
   @media screen and (min-width: $tablet) {

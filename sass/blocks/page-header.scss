@@ -40,7 +40,7 @@
   .page-header {
     padding-top: 33px;
 
-    background-image: url("../img/page-header-background-mobile@1x.png");
+    background-image: url("../img/page-header_bg_mobile@1x.png");
     background-position: center 70%;
   }
 
@@ -66,7 +66,7 @@
 @media screen and (min-width: $tablet) {
   .page-header {
     min-height: 540px;
-    background-image: url("../img/page-header-background-tablet@1x.png");
+    background-image: url("../img/page-header_bg_tablet@1x.png");
     background-position: right -90px top 30px;
   }
 
@@ -87,7 +87,7 @@
 @media screen and (min-width: $desktop) {
   .page-header {
     min-height: 760px;
-    background-image: url("../img/page-header-background-desktop@1x.png");
+    background-image: url("../img/page-header_bg_desktop@1x.png");
     background-position: right -144px top -87px;
   }
 
