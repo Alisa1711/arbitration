@@ -1,0 +1,133 @@
+.skills {
+  @include outline;
+  min-width: $min-width;
+  padding-top: 50px;
+  // @include container;
+}
+
+.skills__title {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -5px;
+    width: 70px;
+    height: 2px;
+    background-color: $accent-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    width: 70px;
+    height: 2px;
+    background-color: $accent-color;
+  }
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  counter-reset: skills-counter;
+}
+
+.skills__item {
+  position: relative;
+
+  &::before {
+    counter-increment: skills-counter;
+    content: counter(skills-counter);
+    position: absolute;
+    left: -25px;
+
+    font-size: 72px;
+    font-weight: 900;
+    color: $add-color;
+    text-align: center;
+
+    opacity: 0.05;
+  }
+
+  &::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: -55px;
+    width: 16px;
+    height: 16px;
+
+    border: 6px solid $add-color;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .skills {
+    margin-top: 83px;
+  }
+
+  .skills__inner {
+    width: $max-width-mobile;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .skills__list {
+    margin-top: 50px;
+  }
+
+  .skills__item {
+    width: 195 / $mobile-content * 100%;
+    margin-left: 87px;
+
+    & + & {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .skills {
+    width: $max-width-tablet;
+    max-width: 915px;
+    margin: 0 auto;
+    margin-top: 106px;
+  }
+
+  .skills__list {
+    align-content: space-between;
+    justify-content: space-between;
+    width: 595 / $tablet-content * 100% ;
+    max-height: 300px;
+    margin: 0 auto;
+
+    counter-reset: skills-counter -3;
+  }
+
+  .skills__item {
+    width: 235 / 595 * 100%;
+    max-width: 300px;
+    margin-left: 62px;
+    margin-bottom: 50px;
+
+    &--bullet_dot::before {
+      content: ".";
+    }
+
+    &--bullet_slash::before {
+      content: "/";
+    }
+  }
+}

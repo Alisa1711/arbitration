@@ -1,25 +1,20 @@
 .author {
-  // @include outline;
+  @include outline;
 
-  @include container;
-  margin-top: 75px;
-  padding-top: 140px;
+  min-width: $min-width;
+}
 
-  background: radial-gradient(30em at right 20% center, rgba($add-color, 0.1), transparent 50%);
-
+.author__inner {
+  @include outline;
+  margin: 0 auto;
 }
 
 .author__border {
   box-sizing: border-box;
   display: flex;
-  // padding-top: 125px;
+  align-items: center;
 
   border: 3px solid $accent-color;
-}
-
-.author__content {
-  margin: auto;
-  width: 254 / $mobile-content * 100%;
 }
 
 .author__title {
@@ -36,33 +31,124 @@
 }
 
 .author__text {
-  margin-top: 35px;
   margin-bottom: 0;
 }
 
+.author__img {
+  order: -1;
+
+  line-height: 0; //фиксит лишний пробел у картинки
+}
+
 @media screen and (max-width: $mobile) {
-    .author {
-    text-align: center;
+  .author {
+    margin-top: 75px;
+    padding-top: 140px;
+
+    background: radial-gradient(30em at right 20% center, rgba($add-color, 0.1), transparent 50%);
+  }
+
+  .author__inner {
+    width: $max-width-mobile;
+    max-width: 450px;
   }
 
   .author__border {
     flex-direction: column;
-
-    width: 290 / $mobile-content * 100%;
-    max-width: 450px;
-    margin: 0 auto;
   }
 
   .author__content {
-    margin-top: 15px;
+    width: 254 / $mobile-content * 100%;
+    margin-top: 20px;
+    margin-bottom: 70px;
+
+    text-align: center;
   }
 
   .author__text {
-    margin-bottom: 70px;
+    margin-top: 35px;
   }
 
   .author__img {
-    order: -1;
     margin-top: -143px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .author {
+    padding-top: 114px;
+
+    background: radial-gradient(30em at left 49% center, rgba($add-color, 0.1), transparent 50%);
+  }
+
+  .author__inner {
+    width: $max-width-tablet;
+    max-width: 915px;
+  }
+
+  .author__content {
+    width: 345 / 574 * 100%; //процент от ширины элемента author__border (580) на планшете минус толщина рамок (6)
+    margin: 0 auto;
+    padding-top: 20px; //чтобы при переполнении контентом, текст не прилипал к краям
+    padding-bottom: 20px;
+  }
+
+  .author__border {
+    min-height: 494px;
+    margin-left: 140px;
+  }
+
+  .author__title::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 2px;
+    margin-top: 15px;
+    margin-left: -100px;
+
+    background-color: $add-color;
+    opacity: 0.1;
+  }
+
+  .author__text {
+    margin-top: 15px;
+  }
+
+  .author__desc {
+    margin-top: 20px;
+  }
+
+  .author__img {
+    margin-left: -143px; //с учетом ширины рамки
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .author__inner {
+    width: 915 / 1200 * 100%;
+    max-width: 1000px;
+  }
+
+  .author__border {
+    min-height: 600px;
+    margin-left: 182px;
+  }
+
+  .author__content {
+    width: 390 / 727 * 100%;
+  }
+
+  .author__title::after {
+    width: 400px;
+    margin-top: 0;
+    margin-left: -190px;
+  }
+
+  .author__text {
+    margin-top: 50px;
+  }
+
+  .author__img {
+    margin-left: -185px;
   }
 }
