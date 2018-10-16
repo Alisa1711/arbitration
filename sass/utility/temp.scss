@@ -1,0 +1,19 @@
+.outliner {
+  outline: 1px dotted yellow;
+  @media screen and (min-width: $tablet) {
+    outline-color: red;
+  }
+  @media screen and (min-width: $desktop) {
+    outline-color: blue;
+  }
+}
+
+.section-outliner {
+  outline: 1px dotted rgba(white, 0.3);
+  // @media screen and (min-width: $tablet) {
+  //   outline-color: rgba(red, 0.3);
+  // }
+  // @media screen and (min-width: $desktop) {
+  //   outline-color: rgba(blue, 0.3);
+  // }
+}
