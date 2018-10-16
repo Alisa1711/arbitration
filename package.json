@@ -7,8 +7,7 @@
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
     "gulp-postcss": "^7.0.1",
-    "gulp-sass": "^4.0.1",
-    "minimatch": ">=3.0.2"
+    "gulp-sass": "^4.0.1"
   },
   "browserslist": [
     "last 2 versions",
