@@ -1,8 +1,9 @@
 .skills {
-  @include outline;
-  min-width: $min-width;
-  padding-top: 50px;
-  // @include container;
+  padding-top: 40px;
+}
+
+.skills__inner {
+  @include container;
 }
 
 .skills__title {
@@ -11,7 +12,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -50px;
+    top: -40px;
     left: -5px;
     width: 70px;
     height: 2px;
@@ -21,7 +22,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: -30px;
+    top: -27px;
     left: 20px;
     width: 70px;
     height: 2px;
@@ -74,14 +75,9 @@
 }
 
 @media screen and (max-width: $mobile) {
-  .skills {
-    margin-top: 83px;
-  }
 
   .skills__inner {
-    width: $max-width-mobile;
     max-width: 450px;
-    margin: 0 auto;
   }
 
   .skills__list {
@@ -99,11 +95,20 @@
 }
 
 @media screen and (min-width: $tablet) {
-  .skills {
-    width: $max-width-tablet;
+
+  .skills__inner {
     max-width: 915px;
-    margin: 0 auto;
-    margin-top: 106px;
+  }
+
+  .skills__title {
+
+    &::before {
+      left: -64px;
+    }
+
+    &::after {
+      left: -44px;
+    }
   }
 
   .skills__list {
@@ -112,6 +117,7 @@
     width: 595 / $tablet-content * 100% ;
     max-height: 300px;
     margin: 0 auto;
+    margin-top: 78px;
 
     counter-reset: skills-counter -3;
   }
@@ -128,6 +134,38 @@
 
     &--bullet_slash::before {
       content: "/";
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .skills {
+    min-height: 640px;
+
+    background-image: linear-gradient(to bottom, rgba($add-color, 0.05) 2%, transparent 2%);
+    background-size: 100px 100px;
+    background-position: top 1224px;
+  }
+
+  .skills__inner {
+    max-width: $max-width;
+  }
+
+  .skills__list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    width: 100%;
+
+    counter-reset: skills-counter;
+  }
+
+  .skills__item {
+    &--bullet_dot::before {
+      content: counter(skills-counter);
+    }
+    &--bullet_slash::before {
+      content: counter(skills-counter);
     }
   }
 }

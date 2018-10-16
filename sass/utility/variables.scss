@@ -18,9 +18,9 @@ $mobile-content: 290;
 $tablet-content: 720;
 $desktop-content: 1140;
 
-$max-width-mobile: $mobile-content / 320 * 100%;
-$max-width-tablet: $tablet-content / 768 * 100%;
-$max-width-desktop: $desktop-content / 1200 * 100%;
+$mobile-content-percent: $mobile-content / 320 * 100%;
+$tablet-content-percent: $tablet-content / 768 * 100%;
+$desktop-content-percent: $desktop-content / 1200 * 100%;
 
 $min-width: 320px;
 $max-width: 1600px;

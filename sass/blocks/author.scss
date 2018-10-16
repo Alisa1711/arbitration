@@ -1,12 +1,5 @@
-.author {
-  @include outline;
-
-  min-width: $min-width;
-}
-
 .author__inner {
-  @include outline;
-  margin: 0 auto;
+  @include container;
 }
 
 .author__border {
@@ -42,14 +35,12 @@
 
 @media screen and (max-width: $mobile) {
   .author {
-    margin-top: 75px;
     padding-top: 140px;
 
     background: radial-gradient(30em at right 20% center, rgba($add-color, 0.1), transparent 50%);
   }
 
   .author__inner {
-    width: $max-width-mobile;
     max-width: 450px;
   }
 
@@ -82,7 +73,6 @@
   }
 
   .author__inner {
-    width: $max-width-tablet;
     max-width: 915px;
   }
 

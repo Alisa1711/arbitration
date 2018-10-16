@@ -1,15 +1,4 @@
-@mixin outline {
-  outline: 1px dotted yellow;
-  @media screen and (min-width: $tablet) {
-    outline-color: red;
-  }
-  @media screen and (min-width: $desktop) {
-    outline-color: blue;
-  }
-}
-
 @mixin list-reset {
-  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -19,19 +8,15 @@
   margin: 0 auto;
 
   @media screen and (max-width: $mobile) {
-    box-sizing: border-box;
-    min-width: $min-width;
-    width: 100%;
-    padding-left: 15 / 320 * 100%;
-    padding-right: 15 / 320 * 100%;
+    width: $mobile-content-percent;
   }
 
   @media screen and (min-width: $tablet) {
-    width: $max-width-tablet;
+    width: $tablet-content-percent;
   };
 
   @media screen and (min-width: $desktop) {
+    width: $desktop-content-percent;
     max-width: $max-width;
-    width: $max-width-desktop;
   }
 }

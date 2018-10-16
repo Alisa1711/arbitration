@@ -1,15 +1,16 @@
 @import "utility/normalize.scss",
 "utility/variables.scss",
 "utility/mixins.scss",
-"utility/global.scss";
+"utility/global.scss",
+"utility/temp.scss"; // to remove
 
-@import "blocks/page-content.scss",
+@import "blocks/page.scss",
 "blocks/title.scss",
 "blocks/subtitle.scss",
 "blocks/input.scss",
 "blocks/button.scss",
 "blocks/form.scss",
-"blocks/page-header.scss",
+"blocks/header.scss",
 "blocks/features.scss",
 "blocks/author.scss",
 "blocks/skills.scss";

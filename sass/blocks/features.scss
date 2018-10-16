@@ -1,16 +1,12 @@
-.features {
-  @include outline;
-  @include container;
-  margin: 0 auto;
-}
-
 .features__list {
-  @include list-reset;
-
+  box-sizing: border-box;
   display: flex;
+  @include container;
 
   font-weight: 300;
   line-height: 20px;
+
+  @include list-reset;
 }
 
 .features__item {
@@ -54,7 +50,7 @@ box-sizing: border-box;
 
 @media screen and (max-width: $mobile) {
   .features {
-    margin-top: 16px;
+    padding-top: 16px;
   }
 
   .features__list {
@@ -89,10 +85,6 @@ box-sizing: border-box;
 }
 
 @media screen and (min-width: $desktop) {
-  .features {
-    margin-top: -20px;
-  }
-
   .features__list {
     position: relative;
     justify-content: space-between; //todo
